@@ -42,9 +42,9 @@ export default NextAuth({
         };
         try {
           let user = await User.findOne({ googleId: user.id });
-          if (!user) {
-            user = await User.create(newUser);
-          }
+          // if (!user) {
+          //   user = await User.create(newUser);
+          // }
         } catch (error) {
           console.log(
             "error occured during next auth registeration or login",

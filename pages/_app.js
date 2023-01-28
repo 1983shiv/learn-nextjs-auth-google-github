@@ -1,7 +1,7 @@
-import { Provider } from 'next-auth/client'
-import Navbar from '../components/Navbar'
-import '../styles/globals.css'
-import '../components/Navbar.css'
+import { Provider } from "next-auth/client";
+import Navbar from "../components/Navbar";
+import "../styles/globals.css";
+import "../components/Navbar.css";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }) {
       <Navbar />
       <Component {...pageProps} />
     </Provider>
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;
