@@ -87,13 +87,15 @@ function TailLoginForm() {
               </button>
             </div>
           </form>
-          <div class="flex flex-col items-center justify-center">
-            <span class="text-center text-gray-500 mb-6">Or continue with</span>
-            <div class="flex w-full justify-center">
-              <div class="p-2 lg:w-1/3 bg-gray-100 rounded-br-md m-2 flex justify-center">
+          <div className="flex flex-col items-center justify-center">
+            <span className="text-center text-gray-500 mb-6">
+              Or continue with
+            </span>
+            <div className="flex w-full justify-center">
+              <div className="p-2 lg:w-1/3 bg-gray-100 rounded-br-md m-2 flex justify-center">
                 <Link href="/api/auth/signin">
                   <a
-                    class="signin-btn"
+                    className="signin-btn"
                     onClick={(e) => {
                       e.preventDefault();
                       signIn("github");
@@ -109,10 +111,10 @@ function TailLoginForm() {
                   </a>
                 </Link>
               </div>
-              <div class="p-2 lg:w-1/3 bg-gray-100 rounded-br-md m-2 flex justify-center">
+              <div className="p-2 lg:w-1/3 bg-gray-100 rounded-br-md m-2 flex justify-center">
                 <Link href="/api/auth/signin">
                   <a
-                    class="signin-btn"
+                    className="signin-btn"
                     onClick={(e) => {
                       e.preventDefault();
                       signIn("google");
@@ -128,10 +130,10 @@ function TailLoginForm() {
                   </a>
                 </Link>
               </div>
-              <div class="p-2 lg:w-1/3 bg-gray-100 rounded-br-md m-2 flex justify-center">
+              <div className="p-2 lg:w-1/3 bg-gray-100 rounded-br-md m-2 flex justify-center">
                 <Link href="/api/auth/signin">
                   <a
-                    class="signin-btn"
+                    className="signin-btn"
                     onClick={(e) => {
                       e.preventDefault();
                       signIn("facebook");

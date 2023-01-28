@@ -16,8 +16,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          {session ? `${session.user.name}, ` : ""}Welcome to{" "}
-          <a href="https://nextjs.org">Next.js!</a>
+          {session ? `${session.user.name}, ` : ""}Welcome
         </h1>
       </main>
 
