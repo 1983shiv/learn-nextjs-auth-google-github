@@ -50,8 +50,8 @@ function Navbar() {
         {session && (
           <li className="flex justify-center items-center">
             <img
-              src={session.user.image}
-              alt={session.user.name}
+              src={session?.user?.image}
+              alt={session?.user?.name}
               width={35}
               height={35}
               className="rounded-lg mr-2 my-auto"

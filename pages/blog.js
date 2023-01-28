@@ -12,7 +12,7 @@ export async function getServerSideProps(context) {
   if (!session) {
     return {
       redirect: {
-        destination: `/api/auth/signin?callbackUrl=${process.env.BASE_URL}/stories`,
+        destination: `/api/auth/signin?callbackUrl=${process.env.BASE_URL}/blog`,
         permanent: false,
       },
     };
