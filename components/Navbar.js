@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { signIn, signOut, useSession } from "next-auth/client";
+import { signOut, useSession } from "next-auth/client";
 
 function Navbar() {
   const [session, loading] = useSession();
@@ -12,11 +12,6 @@ function Navbar() {
         <li>
           <Link href="/">
             <a>Home</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/signin">
-            <a>SignIn w Github</a>
           </Link>
         </li>
         <li>
@@ -36,15 +31,8 @@ function Navbar() {
         </li>
         {!loading && !session && (
           <li>
-            <Link href="/api/auth/signin">
-              <a
-                onClick={(e) => {
-                  e.preventDefault();
-                  signIn();
-                }}
-              >
-                Sign In
-              </a>
+            <Link href="/signin">
+              <a>Sign In</a>
             </Link>
           </li>
         )}
@@ -60,6 +48,17 @@ function Navbar() {
                 Sign Out
               </a>
             </Link>
+          </li>
+        )}
+        {session && (
+          <li className="flex justify-center items-center">
+            <img
+              src={session.user.image}
+              alt={session.user.name}
+              width={35}
+              height={35}
+              className="rounded-lg mr-2 my-auto"
+            />
           </li>
         )}
       </ul>

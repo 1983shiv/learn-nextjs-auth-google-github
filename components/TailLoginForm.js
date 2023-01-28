@@ -95,7 +95,6 @@ function TailLoginForm() {
               <div className="p-2 lg:w-1/3 bg-gray-100 rounded-br-md m-2 flex justify-center">
                 <Link href="/api/auth/signin">
                   <a
-                    className="signin-btn"
                     onClick={(e) => {
                       e.preventDefault();
                       signIn("github");
@@ -114,7 +113,6 @@ function TailLoginForm() {
               <div className="p-2 lg:w-1/3 bg-gray-100 rounded-br-md m-2 flex justify-center">
                 <Link href="/api/auth/signin">
                   <a
-                    className="signin-btn"
                     onClick={(e) => {
                       e.preventDefault();
                       signIn("google");
@@ -133,7 +131,6 @@ function TailLoginForm() {
               <div className="p-2 lg:w-1/3 bg-gray-100 rounded-br-md m-2 flex justify-center">
                 <Link href="/api/auth/signin">
                   <a
-                    className="signin-btn"
                     onClick={(e) => {
                       e.preventDefault();
                       signIn("facebook");

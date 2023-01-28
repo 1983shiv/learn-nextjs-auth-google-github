@@ -25,11 +25,17 @@ export default NextAuth({
       console.log("user from nextauth", user);
       if (user) {
         token.id = user.id;
+        token.name = user.name;
+        token.email = user.email;
+        token.image = user.image;
       }
       return token;
     },
     async session(session, token) {
       session.user.id = token.id;
+      session.user.name = token.name;
+      session.user.image = token.image;
+      session.user.email = token.email;
       return session;
     },
   },
